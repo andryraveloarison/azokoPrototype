@@ -55,7 +55,9 @@ async function processImage(uri) {
       },
     });
 
+    alert("reponse")
     const result = await response.json();
+    alert(result.text)
     setOcrResult(result.text.join("\n")); // Affiche le texte extrait
   } catch (error) {
     console.error("Erreur OCR:", error);
@@ -66,6 +68,9 @@ async function processImage(uri) {
 
   return (
     <View style={styles.vue}>
+      
+      <Text style={styles.title}>Azoko Prototype</Text>
+
       <TouchableOpacity style={styles.buttonContainer} onPress={takePhoto}>
         <Text style={styles.buttonText}>📷 Prendre une photo</Text>
       </TouchableOpacity>
@@ -91,6 +96,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     gap: 10,
+  },
+  title: {
+    fontSize:40,
+    color: "#01212e"
   },
   buttonContainer: {
     backgroundColor: "grey",

@@ -10,7 +10,7 @@ export default function AppNavigator() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="CameraScreen">
-        <Stack.Screen name="CameraScreen" component={CameraScreen} options={{ title: "📷 Scanner" }} />
+        <Stack.Screen name="CameraScreen" component={CameraScreen} options={{ title: "Azoko" }} />
         <Stack.Screen name="ResultScreen" component={ResultScreen} options={{ title: "📝 Résultat" }} />
       </Stack.Navigator>
     </NavigationContainer>
